@@ -20,12 +20,13 @@ func parse_json(fileBytes []byte) (output bool, err error) {
 	if err != nil {
 		return false, err
 	}
+	fmt.Print(awsIAMRolePolicy)
 	return true, nil
 }
 
 
 func main() {
-	fileBytes, err := read_json("/home/kacperek/ZadaniaNaStaz/Remitly/JsonParser/inputs/aws_iam_role_policy.json")
+	fileBytes, err := read_json("inputs/aws_iam_role_policy.json")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
