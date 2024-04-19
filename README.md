@@ -89,6 +89,9 @@ All of the assumptions comes from [AWS Documentation](https://docs.aws.amazon.co
 
 Add your json file into **inputs** directory. Next, in **main.go** in line 45 in function `CheckJSONFormat` change the path to your json file for example: **"inputs/your_json_file_name.json"**
 
+The function responsible for parsing the input is `CheckJSONFormat`. It returns true and nil if the format is proper, false and error if otherwise.
+The `main` functions prints result in the terminal.
+
 
 ## Docstrings
 
