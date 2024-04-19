@@ -6,11 +6,15 @@
             {
                 "Sid": "IamListAccess",
                 "Effect": "Allow",
+                "Principal": {
+                    "AWS": ["arn:aws:iam"]
+                },
                 "Action": [
                     "iam:ListRoles",
                     "iam:ListUsers"
                 ],
-                "Resource": "*"
+                "Resource": ["dwada"],
+                "Condition": {"Bool": {"aws:MultiFactorAuthPresent": "true"}}
             }
         ]
     }

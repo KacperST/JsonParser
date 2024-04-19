@@ -1,0 +1,11 @@
+{
+    "Sid": "1",
+    "Effect": "Allow",
+    "Principal": {"AWS": [""]},
+    "Action": ["s3:*"],
+    "Resource": [
+        "arn:aws:s3:::mybucket",
+        "arn:aws:s3:::mybucket/*"
+    ],
+    "Condition": {"Bool": {"aws:MultiFactorAuthPresent": "true"}}
+}
